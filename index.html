@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bernadette Tongol | Business Development & Retail Consultant UAE</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #0E0D0B;
+  --bg2: #141310;
+  --bg3: #1A1916;
+  --sand: #D4A827;
+  --sand-light: #F2CC60;
+  --sand-pale: #FDE98A;
+  --gold-shine: linear-gradient(105deg, #7A5C1E 0%, #B8881A 18%, #F2CC60 35%, #FFF4C2 48%, #F2CC60 55%, #D4A827 70%, #8B6820 85%, #C9991F 100%);
+  --gold-shine-text: linear-gradient(105deg, #A07820 0%, #D4A827 20%, #FDE98A 38%, #FFFBE0 50%, #FDE98A 60%, #D4A827 75%, #A07820 100%);
+  --gold-btn: linear-gradient(110deg, #8B6514 0%, #C9951C 20%, #F0C842 38%, #FFF0A0 50%, #F0C842 62%, #C08A18 80%, #8B6514 100%);
+  --terracotta: #B5622A;
+  --text: #F0EDE6;
+  --text-mid: #A09890;
+  --text-dim: #5A5550;
+  --border: rgba(212,168,39,0.18);
+  --border-mid: rgba(242,204,96,0.35);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
 
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s;}
+nav.scrolled{background:rgba(14,13,11,0.96);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:0.06em;text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--text-mid);text-decoration:none;font-size:0.75rem;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--sand);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hero-left{background:var(--bg2);display:flex;flex-direction:column;justify-content:center;padding:140px 6% 80px 8%;position:relative;}
+.hero-left::after{content:'';position:absolute;right:0;top:10%;bottom:10%;width:1px;background:linear-gradient(to bottom,transparent,var(--border-mid),transparent);}
+.hero-right{background:var(--bg3);display:flex;flex-direction:column;justify-content:flex-end;padding:140px 6% 80px;position:relative;overflow:hidden;}
+.hero-right::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(200,169,110,0.06) 0%,transparent 60%);}
+
+.gold-text{background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.eyebrow{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:32px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--gold-shine);flex-shrink:0;}
+
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:400;line-height:1.08;letter-spacing:-0.01em;color:var(--text);}
+h1 em{background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+.hero-desc{font-size:0.95rem;color:var(--text-mid);line-height:1.9;margin:32px 0 48px;font-weight:300;max-width:400px;}
+.btn-main{display:inline-block;background:var(--gold-btn);color:#2A1800;padding:14px 36px;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;position:relative;overflow:hidden;}
+.btn-main::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.35),transparent);animation:shimmer 2.5s infinite;}
+@keyframes shimmer{0%{left:-100%;}100%{left:200%;}}
+.btn-main:hover{filter:brightness(1.12);transform:translateY(-1px);box-shadow:0 6px 24px rgba(212,168,39,0.35);}
+.btn-ghost{display:inline-block;border:1px solid var(--border-mid);color:var(--text-mid);padding:14px 36px;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;margin-left:16px;}
+.btn-ghost:hover{border-color:var(--sand);color:var(--sand);}
+
+.hero-stats{margin-top:72px;padding-top:40px;border-top:1px solid var(--border);display:flex;gap:48px;}
+.stat-n{font-family:'Playfair Display',serif;font-size:3rem;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.stat-l{font-size:0.68rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;}
+
+.hero-right-content{position:relative;z-index:1;}
+.feature-label{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:48px;}
+.feature-list{list-style:none;}
+.feature-list li{padding:20px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;font-size:0.88rem;color:var(--text-mid);font-weight:300;letter-spacing:0.03em;transition:color 0.3s;}
+.feature-list li:hover{color:var(--text);}
+.feature-list li::before{content:'';width:6px;height:6px;background:var(--gold-btn);border-radius:50%;flex-shrink:0;box-shadow:0 0 6px rgba(242,204,96,0.5);}
+.feature-list li:first-child{border-top:1px solid var(--border);}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--gold-btn);padding:14px 0;overflow:hidden;white-space:nowrap;position:relative;}
+.marquee-wrap::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,0.12) 50%,transparent 80%);pointer-events:none;}
+.marquee-track{display:inline-flex;animation:marquee 25s linear infinite;}
+.marquee-item{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#1A0E00;padding:0 40px;}
+.marquee-dot{color:#5A3800;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTIONS */
+section{padding:110px 8%;}
+.s-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.s-label::before{content:'';width:24px;height:1px;background:var(--gold-btn);flex-shrink:0;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:400;color:var(--text);line-height:1.15;margin-bottom:16px;}
+.s-title em{background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;}
+
+/* SERVICES */
+.services{background:var(--bg2);}
+.services-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px;}
+.s-intro{font-size:0.92rem;color:var(--text-mid);line-height:1.85;font-weight:300;}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);}
+.svc{background:var(--bg2);padding:48px 40px;position:relative;overflow:hidden;transition:background 0.4s;}
+.svc:hover{background:var(--bg3);}
+.svc-n{font-family:'Playfair Display',serif;font-size:5rem;font-weight:400;color:rgba(212,168,39,0.06);position:absolute;top:16px;right:24px;line-height:1;}
+.svc-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.3;}
+.svc-desc{font-size:0.85rem;color:var(--text-mid);line-height:1.85;font-weight:300;}
+.svc-arrow{display:inline-block;margin-top:24px;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:opacity 0.3s;}
+
+/* ABOUT */
+.about{background:var(--bg);display:grid;grid-template-columns:5fr 4fr;gap:100px;align-items:start;}
+.about-body{font-size:0.93rem;color:var(--text-mid);line-height:1.95;font-weight:300;margin-top:28px;}
+.about-body p+p{margin-top:18px;}
+.timeline{margin-top:0;}
+.tl-item{padding:28px 0 28px 28px;border-left:1px solid var(--border);position:relative;}
+.tl-item::before{content:'';position:absolute;left:-4px;top:36px;width:8px;height:8px;background:var(--gold-btn);border-radius:50%;box-shadow:0 0 8px rgba(242,204,96,0.4);}
+.tl-year{font-size:0.65rem;letter-spacing:0.15em;background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-transform:uppercase;margin-bottom:6px;}
+.tl-role{font-size:0.9rem;font-weight:500;color:var(--text);margin-bottom:4px;}
+.tl-co{font-size:0.8rem;color:var(--text-dim);font-weight:300;}
+
+/* BRANDS */
+.brands{background:var(--bg3);text-align:center;}
+.brands-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:720px;margin:60px auto 0;}
+.brands-col-title{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:24px;}
+.brand-pill{display:inline-block;border:1px solid var(--border);padding:10px 22px;margin:5px;font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--text-mid);transition:all 0.3s;letter-spacing:0.02em;}
+.brand-pill:hover{border-color:var(--sand-light);background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;border-color:rgba(242,204,96,0.5);}
+
+/* ENGAGE */
+.engage{background:var(--bg2);}
+.engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:60px;}
+.eng-card{background:var(--bg2);padding:48px 36px;transition:background 0.3s;}
+.eng-card:hover{background:var(--bg3);}
+.eng-tag{font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px;}
+.eng-title{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--text);margin-bottom:14px;font-weight:500;}
+.eng-desc{font-size:0.84rem;color:var(--text-mid);line-height:1.85;font-weight:300;}
+
+/* CONTACT */
+.contact{background:var(--bg);position:relative;overflow:hidden;}
+.contact::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border:1px solid rgba(200,169,110,0.05);border-radius:50%;}
+.contact::after{content:'';position:absolute;bottom:-100px;right:-100px;width:350px;height:350px;border:1px solid rgba(200,169,110,0.04);border-radius:50%;}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;position:relative;z-index:1;}
+.contact-desc{font-size:0.93rem;color:var(--text-mid);line-height:1.9;font-weight:300;margin:24px 0 40px;}
+.contact-details{display:flex;flex-direction:column;gap:0;}
+.cd-item{padding:24px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.cd-item:first-child{border-top:1px solid var(--border);}
+.cd-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);}
+.cd-val{font-size:0.9rem;color:var(--text);font-weight:300;}
+.cd-val a{background:var(--gold-shine-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.cd-val a:hover{filter:brightness(1.2);}
+
+/* FOOTER */
+footer{background:var(--bg2);padding:28px 8%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+footer p{font-size:0.75rem;color:var(--text-dim);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .services-header{grid-template-columns:1fr;}
+  .about{grid-template-columns:1fr;}
+  .contact-inner{grid-template-columns:1fr;}
+  .engage-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .brands-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="#home">BT</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#brands">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="eyebrow">Business Development &amp; Retail Consultant</div>
+    <h1>UAE market<br/>expertise,<br/><em>delivered.</em></h1>
+    <p class="hero-desc">Senior-level commercial expertise in business development, lease negotiation, and brand partnerships. Flexible engagements without the overhead of a full-time hire.</p>
+    <div>
+      <a href="#contact" class="btn-main">Let's Talk</a>
+      <a href="#services" class="btn-ghost">Services</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">15+</div><div class="stat-l">Years in UAE</div></div>
+      <div><div class="stat-n">25</div><div class="stat-l">Leases Managed</div></div>
+      <div><div class="stat-n">8+</div><div class="stat-l">Luxury Brands</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-content">
+      <div class="feature-label">Areas of Expertise</div>
+      <ul class="feature-list">
+        <li>Business Development &amp; Sales Strategy</li>
+        <li>Commercial Lease Negotiation: EMAAR, ALDAR, MAF</li>
+        <li>Luxury Brand Entry &amp; Distribution</li>
+        <li>Retail Operations &amp; Team Leadership</li>
+        <li>Customer Experience Design</li>
+        <li>Contract &amp; Partnership Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Business Development</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Lease Negotiation</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Brand Partnerships</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Retail Strategy</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">UAE Market Expertise</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Customer Experience</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Business Development</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Lease Negotiation</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Brand Partnerships</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Retail Strategy</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">UAE Market Expertise</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Customer Experience</span><span class="marquee-dot">✦</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <div class="s-label">What I Do</div>
+      <h2 class="s-title">Services that move<br/><em>businesses forward</em></h2>
+    </div>
+    <p class="s-intro">I work with businesses across the UAE that need senior commercial expertise on a flexible basis. Whether for a single project, an ongoing retainer, or strategic advisory.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-n">01</div>
+      <div class="svc-title">Business Development &amp; Sales Strategy</div>
+      <p class="svc-desc">End-to-end BD support including pipeline building, client pitching, contract negotiation, and deal closure. For companies that need a sharp commercial mind without a full-time hire.</p>
+      <div class="svc-arrow">Enquire →</div>
+    </div>
+    <div class="svc">
+      <div class="svc-n">02</div>
+      <div class="svc-title">Commercial Lease Negotiation</div>
+      <p class="svc-desc">Lease review, negotiation, and renewal management with the UAE's major mall landlords. Protecting your commercial interests across EMAAR, ALDAR, MERAAS, MAF, and Dubai Holding.</p>
+      <div class="svc-arrow">Enquire →</div>
+    </div>
+    <div class="svc">
+      <div class="svc-n">03</div>
+      <div class="svc-title">Brand Entry &amp; Distribution</div>
+      <p class="svc-desc">Helping international brands enter the UAE retail market, covering partner identification, commercial terms negotiation, brand guidelines compliance, and ongoing relationship management.</p>
+      <div class="svc-arrow">Enquire →</div>
+    </div>
+    <div class="svc">
+      <div class="svc-n">04</div>
+      <div class="svc-title">Retail Operations Consulting</div>
+      <p class="svc-desc">Store setup, team training, SOP development, and customer experience design for retail and showroom businesses looking to improve performance and service consistency.</p>
+      <div class="svc-arrow">Enquire →</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div>
+    <div class="s-label">About</div>
+    <h2 class="s-title">15 years learning<br/>the UAE market<br/><em>from the inside</em></h2>
+    <div class="about-body">
+      <p>I didn't learn the UAE retail market from a textbook. My expertise was built from the showroom floor, the lease negotiation table, and the boardroom. I worked my way from Sales Executive to managing brand partnerships and commercial leases for some of the UAE's most prominent retail groups.</p>
+      <p>I've negotiated directly with EMAAR, ALDAR, MERAAS, and MAF. I've managed relationships with some of the world's most demanding luxury brands. I've built BD pipelines, closed contracts, and led customer experience transformations across more than 15 years in this market.</p>
+      <p>Today I bring that experience to businesses that need senior-level guidance without the cost or commitment of a permanent hire. Based in Dubai, available across the UAE.</p>
+    </div>
+    <br/><br/>
+    <a href="#contact" class="btn-main">Work With Me</a>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">2025 to 2026</div>
+      <div class="tl-role">Growth &amp; Partnership Manager</div>
+      <div class="tl-co">Storage &amp; Logistics Sector, Dubai</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2023 to 2025</div>
+      <div class="tl-role">Lease &amp; Brand Relationship Manager</div>
+      <div class="tl-co">Luxury Furniture Retail, Dubai</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2020 to 2023</div>
+      <div class="tl-role">Customer Experience Manager</div>
+      <div class="tl-co">Luxury Furniture Retail, Dubai</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2008 to 2019</div>
+      <div class="tl-role">Sales Executive → Sales Manager</div>
+      <div class="tl-co">Mattress Manufacturing &amp; Retail, UAE</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" id="brands">
+  <div class="s-label" style="justify-content:center;">Past Experience</div>
+  <h2 class="s-title">Brands &amp; landlords I've<br/><em>worked with</em></h2>
+  <p style="font-size:0.85rem;color:var(--text-dim);margin-top:8px;font-weight:300;">Stated as past professional experience, not implied endorsement.</p>
+  <div class="brands-grid">
+    <div>
+      <div class="brands-col-title">Luxury Brands</div>
+      <span class="brand-pill">Armani/Casa</span>
+      <span class="brand-pill">Bentley Home</span>
+      <span class="brand-pill">Bugatti Home</span>
+      <span class="brand-pill">Rolf Benz</span>
+      <span class="brand-pill">Håstens</span>
+      <span class="brand-pill">Vispring</span>
+      <span class="brand-pill">Ergomotion</span>
+    </div>
+    <div>
+      <div class="brands-col-title">Mall Landlords</div>
+      <span class="brand-pill">EMAAR</span>
+      <span class="brand-pill">ALDAR</span>
+      <span class="brand-pill">Dubai Holding</span>
+      <span class="brand-pill">MERAAS</span>
+      <span class="brand-pill">Majid Al Futtaim</span>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGE -->
+<section class="engage" id="engage">
+  <div class="s-label">Engagement</div>
+  <h2 class="s-title">How we can<br/><em>work together</em></h2>
+  <div class="engage-grid">
+    <div class="eng-card">
+      <div class="eng-tag">Most Popular</div>
+      <div class="eng-title">Monthly Retainer</div>
+      <p class="eng-desc">Ongoing BD, lease management, or brand relationship support. I become a trusted extension of your team, available, informed, and invested in your results month to month.</p>
+    </div>
+    <div class="eng-card">
+      <div class="eng-tag">Defined Scope</div>
+      <div class="eng-title">Project-Based</div>
+      <p class="eng-desc">A specific lease negotiation, brand entry project, or sales campaign. Clear scope, clear deliverables, and focused execution from start to finish.</p>
+    </div>
+    <div class="eng-card">
+      <div class="eng-tag">Strategic</div>
+      <div class="eng-title">Advisory</div>
+      <p class="eng-desc">Strategic guidance for high-stakes business decisions. Ideal for founders and leadership teams who need an experienced commercial sounding board in the UAE market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="s-label">Contact</div>
+      <h2 class="s-title">Ready to grow<br/>your business<br/><em>in the UAE?</em></h2>
+      <p class="contact-desc">Whether you have a specific project in mind or simply want to explore how I can help, I'd love to hear from you.</p>
+      <a href="mailto:bernadette.tongol@gmail.com" class="btn-main">Send an Email</a>
+    </div>
+    <div class="contact-details">
+      <div class="cd-item">
+        <span class="cd-label">Phone / WhatsApp</span>
+        <span class="cd-val"><a href="tel:+971524563935">+971 52 456 3935</a></span>
+      </div>
+      <div class="cd-item">
+        <span class="cd-label">Email</span>
+        <span class="cd-val"><a href="mailto:bernadette.tongol@gmail.com">bernadette.tongol@gmail.com</a></span>
+      </div>
+      <div class="cd-item">
+        <span class="cd-label">Location</span>
+        <span class="cd-val" style="color:var(--text-mid);">Dubai, UAE</span>
+      </div>
+      <div class="cd-item">
+        <span class="cd-label">Availability</span>
+        <span class="cd-val" style="color:var(--sand);">Open to new engagements</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Bernadette Tongol. All rights reserved.</p>
+  <p style="color:var(--text-dim);">Business Development &amp; Retail Consultant · Dubai, UAE</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+</body>
+</html>
